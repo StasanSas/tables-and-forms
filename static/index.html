@@ -10,10 +10,10 @@
     <h1>Найди себе друга!</h1>
     <form action="/pets/orders" method="post">
         <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required><br><br>
 
         <label for="pet_type">Тип питомца:</label>
         <select id="pet_type" name="petType" required>
@@ -24,28 +24,30 @@
         </select><br><br>
 
         <label for="gender">Пол:</label>
-        <input type="text" id="gender" name="gender" required><br><br>
+        <select id="gender" name="gender" required>
+            <option value="boy">Мальчик</option>
+            <option value="girl">Девочка</option>
+            <option value="none">Не указан</option>
+        </select><br><br>
 
         <label for="eye_color">Цвет глаз:</label>
-        <input type="text" id="eye_color" name="eyeColor" required><br><br>
+        <input type="color" id="eye_color" name="eyeColor" required><br><br>
 
         <label for="tail_length">Длина хвоста:</label>
-        <input type="text" id="tail_length" name="tailLength" required><br><br>
+        <input type="number" id="tail_length" name="tailLength" placeholder="в см" min="7" max="120" required><br><br>
 
         <label for="dob">Дата рождения:</label>
         <input type="date" id="dob" name="dateOfBirth" required><br><br>
 
         <label for="phone">Телефон:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
+        <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required><br><br>
 
-        <label>
-            <input type="checkbox" name="rules" required> Согласен с правилами
-        </label><br><br>
+        <input type="hidden" name="rules" value="true" required>
+        <label>Согласен с правилами</label><br><br>
 
         <button type="submit">Отправить заказ</button>
+        <input type="reset" value="Сбросить значения">
     </form>
-    <!--Форму размещай тут-->
-
 </main>
 </body>
 </html>
